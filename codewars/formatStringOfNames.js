@@ -42,5 +42,5 @@ const list = (arr) => {
 console.log(list([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ]))
 
 const list2 = (arr) => {
-    
+
 }
