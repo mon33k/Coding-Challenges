@@ -18,7 +18,16 @@ var singleNumber = function(nums) {
     let obj = {}
     for(let i = 0; i < nums.length; i++) {
         if(!obj[nums[i]]) {
-            
+            obj[nums[i]] = 1
+        } else {
+            obj[nums[i]]++
+        }
+    }
+    for (var num in obj) {
+        if(obj[num] === 1){
+            return num
         }
     }
 };
+
+console.log(singleNumber([1, 1, 3, 3]))
