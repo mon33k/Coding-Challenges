@@ -10,3 +10,29 @@
 
 // As a result you'll have a string you may just copy-paste whenever you feel like defining a list of objects - now without the need to put in names, IDs, curly brackets, colon signs, screw up everything, fail searching for a typo and begin anew. This might come in handy with large lists.
 
+const createStringFromArrObj = (str) => {
+    let strArr = str.split(' ')
+    let obj = {}
+    let arrObj = []
+
+    for (var i = 0; i < strArr.length; i++) {
+        if (i % 2 === 0) {
+            obj.name = strArr[i]
+        } else {
+            obj.id = strArr[i]
+            arrObj.push(obj)
+            obj = {}
+        }
+    }
+    return arrObj
+}
+
+console.log(createStringFromArrObj("red 1 yellow 2 black 3 white 4"))
+
+//-----------  Another way bc above way is throwing errors when I submit my answer  --------------//
+function wordsToObject(input) {
+    var arr = input.split(' '), collection = "[";
+    for (var i = 0; i < arr.length; i+=2)
+      collection += `{name : '${arr[i]}', id : '${arr[i+1]}'}, `;
+    return collection.slice(0,-2) + "]";
+}

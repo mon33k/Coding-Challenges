@@ -41,6 +41,9 @@ const list = (arr) => {
 
 console.log(list([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ]))
 
+
+// ----------------- Another way to solve it ------------------ //
+
 const list2 = (arr) => {
 
 }

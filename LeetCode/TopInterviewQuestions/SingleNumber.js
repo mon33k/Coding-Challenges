@@ -23,6 +23,7 @@ var singleNumber = function(nums) {
             obj[nums[i]]++
         }
     }
+    
     for (var num in obj) {
         if(obj[num] === 1){
             return num
@@ -30,4 +31,4 @@ var singleNumber = function(nums) {
     }
 };
 
-console.log(singleNumber([1, 1, 3, 3]))
+console.log(singleNumber([1, 1, 3, 3, 4]))

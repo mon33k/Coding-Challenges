@@ -10,7 +10,7 @@ var reverseString = function(s) {
 
 //console.log(reverseString("hello"))
 
-// Another way to solve it
+// ----------------- Another way to solve it ------------------ //
 
 function reverse(s) {
     return (s === '') ? '' : reverse(s.substr(1)) + s.charAt(0);
