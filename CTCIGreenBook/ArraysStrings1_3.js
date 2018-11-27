@@ -9,11 +9,22 @@ Output: "Mr%20John%20Smith"
 const URLify = (str) => {
     let strArr = str.split("")
     let emptArr = []
-    let newnew = strArr.map(elem => {
-        elem === " " ? "%20" : elem
-    })
-    console.log(newnew)
-    return strArr
+
+    for(i = 0; i < strArr.length; i++) {
+        if(strArr[i] === " ") {
+            emptArr.push("%")
+        }else{
+            emptArr.push(strArr[i])
+        }
+    }
+    console.log(emptArr)
+    return emptArr
 }
 
 URLify("h el  lo")
+URLify("pea c he s")
+URLify("honey Blo ss om")
+
+
+/* Do it another way */
+
