@@ -1,6 +1,4 @@
 
-
-
 // Format a string of names like 'Bart, Lisa & Maggie'.
 
 // Given: an array containing hashes of names
