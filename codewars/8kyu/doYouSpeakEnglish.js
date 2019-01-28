@@ -1,5 +1,3 @@
-// UNFINISHED
-
 /*
 Given a string of arbitrary length with any ascii characters. Write a function to determine whether the string contains the whole word "English".
 
@@ -11,29 +9,19 @@ Return value as boolean values, true for the string to contains "English", false
 
 */
 
-function spEng(sentence){
-    //write your code here
-    let check = 'english'
-    // let arrEng = [ 'e', 'n', 'g', 'l', 'i', 's', 'h' ]
-    // let eng = {
-    //     'e': 'e',
-    //     'n': 'n',
-    //     'g': 'g',
-    //     'l': 'l',
-    //     'i': 'i',
-    //     's': 's',
-    //     'h': 'h'
-    // }
-    let newnew = sentence.split('')
-    if(newnew.includes(check)) {
+function spEng(sentence) {
+    let str = sentence.toLowerCase()
+
+    if (str.indexOf('english') !== -1) {
         return true
     } else {
         return false
     }
 }
 
-spEng('okayenglishwhateevristhis')
-
+console.log(spEng('okayenglishwhateevristhis'))
+console.log(spEng('EnadfaafvfEnglish[.;[K'))
+console.log(spEng('NOThere////.'))
 
 
 

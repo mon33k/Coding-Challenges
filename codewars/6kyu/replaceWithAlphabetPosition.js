@@ -51,4 +51,7 @@ for(let i = 0; i < arr.length; i++) {
 }
 return result.join(' ').toString()
 }
-alphabetPosition("The sunset sets at twelve o' clock.")
+
+
+
+console.log(alphabetPosition("The sunset sets at twelve o' clock."))
