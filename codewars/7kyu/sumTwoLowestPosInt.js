@@ -9,24 +9,31 @@ Hint: Do not modify the original array.
 */
 
 function sumTwoSmallestNumbers(numbers) {  
-    var low = numbers[0];
-    for(let i=0; i<=numbers.length; i++){
-      if(numbers[i] < low){
-        low = numbers[i]
-      }
+    let lowest1
+    let lowest2
+
+    if(numbers[0] < numbers[1]) {
+        lowest1 = numbers[0]
+        lowest2 = numbers[1]
+    } else {
+        lowest1 = numbers[1]
+        lowest2 = numbers[0]
     }
-    return low 
-    
-    let low2 = numbers[0];
-    for(let j=1; j<=numbers.length; j++){
-      if(numbers[j] != low){
-        // console.log(numbers[j]);
-        if(numbers[j] < low2){
-          low2 = numbers[j];
+
+    for(let i = 2; i < numbers.length; i++) {
+        if(numbers[i] < lowest1) {
+            let temp = lowest1
+            lowest1 = numbers[i]
+            lowest2 = temp
+        } else if (numbers[i] < lowest2) {
+            lowest2 = numbers[i]
         }
-      }
     }
-    
-    return low2
+
+    return lowest1 + lowest2
+
   }
-  
+
+
+console.log(sumTwoSmallestNumbers([10, 343445353, 3453445, 3453545353453])) //3453455
+console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77])) //7
