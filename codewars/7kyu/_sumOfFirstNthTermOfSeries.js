@@ -16,3 +16,21 @@ SeriesSum(2) => 1 + 1/4 = "1.25"
 SeriesSum(5) => 1 + 1/4 + 1/7 + 1/10 + 1/13 = "1.57"
 NOTE: In PHP the function is called series_sum().
  */
+
+function SeriesSum(n){
+    let sum = 0
+    
+    if(n == 0) {
+      return 0.00
+    } else if(n >= 1) {
+       sum = 1.00
+    }
+  
+    for(let i = 2; i < n; i++) {
+      console.log(sum)
+      sum += 1/(i + 3)
+    }
+    return sum.toFixed(2).toString()
+  }
+  
+  SeriesSum(5)
