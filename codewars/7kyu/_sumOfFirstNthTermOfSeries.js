@@ -18,19 +18,21 @@ NOTE: In PHP the function is called series_sum().
  */
 
 function SeriesSum(n){
-    let sum = 0
-    
-    if(n == 0) {
-      return 0.00
-    } else if(n >= 1) {
-       sum = 1.00
-    }
-  
-    for(let i = 2; i < n; i++) {
-      console.log(sum)
-      sum += 1/(i + 3)
-    }
-    return sum.toFixed(2).toString()
+  let sum = 0
+
+  if(n == 0) {
+    return 0.00
+  } else if(n >= 1) {
+     sum = 1.00
+  }
+
+  let divideBy = 4
+  for(let i = 1; i < n; i++) {
+        sum += 1/(divideBy )
+        divideBy += 3
+  }
+  return sum.toFixed(2).toString()
   }
   
-  SeriesSum(5)
+  console.log(SeriesSum(5))
+  

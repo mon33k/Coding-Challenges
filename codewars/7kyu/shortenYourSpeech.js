@@ -16,4 +16,32 @@ shortenSpeech( "Hello, do you want a coffee ? " ) => returns "Hell. do you want 
 shortenSpeech( "Hey fellow warriors !" ) => returns "Hey fell. warr. !"
 
 shortenSpeech( "This is a test") => returns "This is a test"
- */
+*/
+
+const shortenSpeech = (str) => {
+    let arr = str.split(' ')
+    let obj = {
+        a: 0,
+        e: 0,
+        i: 0,
+        o: 0,
+        u: 0
+    }
+    let result = []
+    for(let i = 0; i < arr.length; i++) {
+        if(!arr[i].length < 4) {
+            let segment = arr[i].slice(3, arr[i].length - 1)
+            console.log(segment)
+            if(Object.keys(obj).includes(segment[i])) {
+                result.push('.')
+                console.log(segment[i])
+            }
+        } else {
+            result.push(arr[i])
+        }
+        
+    }
+    return console.log(result)
+}
+
+shortenSpeech("Hey fellow warriors !")
