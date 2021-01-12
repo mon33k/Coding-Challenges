@@ -1,4 +1,4 @@
-//Check Permutation: Given two strings, wrtie a method to decide if one is a permutation of the other. 
+//Check Permutation
 
 const checkPermutation = (str1, str2) => {
 
@@ -30,4 +30,8 @@ const checkPermutation = (str1, str2) => {
 console.log(checkPermutation("ellop", "hello")) // false
 console.log(checkPermutation("elloh", "hello")) // true 
 
-// Another way to do it!
+// Another way to do it! : Given two strings, wrtie a method to decide if one is a permutation of the other. 
+
+const checkPermutation2 = (str1, str2) => {
+    
+}
